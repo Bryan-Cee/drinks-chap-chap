@@ -92,6 +92,9 @@ venv.bak/
 .vscode/
 .idea/
 
+#mac files
+.DS_Store
+
 # Spyder project settings
 .spyderproject
 .spyproject
