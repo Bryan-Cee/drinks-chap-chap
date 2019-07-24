@@ -1,0 +1,25 @@
+{% extends 'home/layout.html' %}
+{% block content %}
+    <div class="drinks-menu">
+        <ul>
+            <li>Vodka &caron;</li>
+            <li>Whisky &caron;</li>
+            <li>Beer &caron;</li>
+            <li>Other &caron;</li>
+        </ul>
+    </div>
+    <div class="carousel">
+        <img class="object-fill" src="http://res.cloudinary.com/dry-wolf/image/upload/c_scale,w_320/v1563953034/drinks-chapchap/ShopLiquor.png" alt="liquor">
+    </div>
+    <div class="drinks-display">
+        <ul class="drinks-list">
+            {% for drink in drinks %}
+                <li class="drink">
+                    <img class="object-fill" alt="drink-picture" src={{ drink.src }}>
+                    <p>{{ drink.name }}</p>
+                    <p class="price">Ksh : {{ drink.price }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock content %}
